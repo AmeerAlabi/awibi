@@ -16,7 +16,7 @@ const HeroSection = () => {
 
         {/* Second Row - First Image (2 cols, 1 row) */}
         <div className="bg-gray-300 col-span-2 row-span-1 flex items-center justify-center border border-dashed border-gray-500">
-          <p className="text-gray-700">Image  (2x1)</p>
+          <p className="text-gray-700">Image3   (2x1)</p>
         </div>
 
         {/* Second Row - Second Image (1 col, 1 row) */}
