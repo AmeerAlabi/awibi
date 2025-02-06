@@ -20,12 +20,12 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white text-[#333333] p-4 shadow-md fixed w-full top-0 z-50">
-      <div className="container mx-auto flex items-center md:justify-around justify-between ">
+      <div className="container mx-auto flex items-center md:justify-between justify-between">
         {/* Logo */}
-        <div className="flex items-center gap-2">
+        <NavLink to="/" className="flex items-center gap-2">
           <img src={log} alt="Logo" className="w-[46px] h-[60px]" />
           <div className="text-[32px] font-bold">AWIBI</div>
-        </div>
+        </NavLink>
 
         {/* Mobile Menu Button */}
         <button
@@ -37,15 +37,15 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <ul
-          className={`md:flex items-center justify-around absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none transition-all duration-300 ${
+          className={`md:flex items-center md:space-x-8 absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-lg md:shadow-none transition-all duration-300 ${
             menuOpen ? "block" : "hidden"
           }`}
         >
-          {/* Dropdown Links */}
+          {/* Dropdowns */}
           {[
-            { name: "Our Company", items: ["Mission", "Team"], key: "ourCompany" },
-            { name: "About Us", items: ["History", "Values"], key: "aboutUs" },
-            { name: "Services", items: ["Web Dev", "Marketing"], key: "services" },
+            { name: "Our Company", items: [{ title: "Mission", link: "/mission" }, { title: "Team", link: "/team" }], key: "ourCompany" },
+            { name: "About Us", items: [{ title: "History", link: "/history" }, { title: "Values", link: "/values" }], key: "aboutUs" },
+            { name: "Services", items: [{ title: "Web Dev", link: "/services" }, { title: "Marketing", link: "/marketing" }], key: "services" },
           ].map(({ name, items, key }) => (
             <li key={key} className="relative w-full md:w-auto">
               <button
@@ -59,10 +59,15 @@ const Navbar = () => {
                   dropdownOpen[key] ? "block" : "hidden"
                 } md:absolute bg-white text-[#333333] mt-2 w-full md:w-40 shadow-lg rounded-lg`}
               >
-                {items.map((item) => (
-                  <li key={item} className="p-5 hover:bg-gray-200">
-                    <NavLink to={`/${item.toLowerCase().replace(" ", "-")}`}>
-                      {item}
+                {items.map(({ title, link }) => (
+                  <li key={title} className="p-5 hover:bg-gray-200">
+                    <NavLink
+                      to={link}
+                      className={({ isActive }) =>
+                        isActive ? "text-[#335CF4] font-bold" : "hover:text-[#335CF4]"
+                      }
+                    >
+                      {title}
                     </NavLink>
                   </li>
                 ))}
@@ -71,20 +76,23 @@ const Navbar = () => {
           ))}
 
           {/* Regular Links */}
-          {["Careers", "Blog"].map((link) => (
-            <li key={link} className="p-5 ">
+          {[
+            { title: "Careers", link: "/careers" },
+            { title: "Blog", link: "/blog" },
+          ].map(({ title, link }) => (
+            <li key={title} className="p-5">
               <NavLink
-                to={`/${link.toLowerCase()}`}
+                to={link}
                 className={({ isActive }) =>
                   isActive ? "text-[#335CF4] font-bold" : "hover:text-[#335CF4]"
                 }
               >
-                {link}
+                {title}
               </NavLink>
             </li>
           ))}
 
-          {/* Contact Us Button (Visible Only in Mobile Menu) */}
+          {/* Contact Us Button (Mobile) */}
           <li className="p-3 text-center md:hidden">
             <NavLink
               to="/contact"
@@ -95,7 +103,7 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Contact Us Button (Visible on Desktop) */}
+        {/* Contact Us Button (Desktop) */}
         <div className="hidden md:block">
           <NavLink
             to="/contact"

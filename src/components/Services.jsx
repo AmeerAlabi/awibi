@@ -23,27 +23,27 @@ const services = [
     description: "Developing responsive and user-friendly mobile applications.",
     link: "#",
   },
-  {
-    id: 4,
-    icon: <FaServer className="text-[#335CF4] text-[24px]" />,
-    title: "Backend Development",
-    description: "Building secure and efficient server-side applications and APIs.",
-    link: "#",
-  },
-  {
-    id: 4,
-    icon: <FaServer className="text-[#335CF4] text-[24px]" />,
-    title: "Backend Development",
-    description: "Building secure and efficient server-side applications and APIs.",
-    link: "#",
-  },
-  {
-    id: 4,
-    icon: <FaServer className="text-[#335CF4] text-[24px]" />,
-    title: "Backend Development",
-    description: "Building secure and efficient server-side applications and APIs.",
-    link: "#",
-  },
+  // {
+  //   id: 4,
+  //   icon: <FaServer className="text-[#335CF4] text-[24px]" />,
+  //   title: "Backend Development",
+  //   description: "Building secure and efficient server-side applications and APIs.",
+  //   link: "#",
+  // },
+  // {
+  //   id: 4,
+  //   icon: <FaServer className="text-[#335CF4] text-[24px]" />,
+  //   title: "Backend Development",
+  //   description: "Building secure and efficient server-side applications and APIs.",
+  //   link: "#",
+  // },
+  // {
+  //   id: 4,
+  //   icon: <FaServer className="text-[#335CF4] text-[24px]" />,
+  //   title: "Backend Development",
+  //   description: "Building secure and efficient server-side applications and APIs.",
+  //   link: "#",
+  // },
 
 ];
 

@@ -33,11 +33,11 @@ const blogs = [
 
 const BlogSection = () => {
   return (
-    <section className="bg-white mt-[70px] py-16">
+    <section className="bg-white mt-[30px] py-16">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-[48px] font-bold text-[#335CF4] mb-4">Our Latest Blogs</h2>
+          <h2 className="text-[48px] font-bold text-[#335CF4] mb-4">Latest in Health Tech</h2>
           <p className="text-[#666666]">Stay updated with the latest in our community,  Here are the latest headlines:</p>
         </div>
 

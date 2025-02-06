@@ -1,43 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import FAQ from './components/Faq'
-import BlogSection from './components/Blog'
-import TestimonialSection from './components/Testimonials'
-import OverlaySection from './components/Section'
-import VisionMission from './components/Mission'
-import Sponsors from './components/Sponsors'
-import Services from './components/Services'
-import HeroSection from './components/Hero'
-import HealthcareSection from './components/Section'
-import AwibIEHR from './components/Section'
-import Hero from './components/Section'
-import Community from './components/Community'
+import React, { Suspense, lazy } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+
+// Lazy Loading Components
+// const HeroSection = lazy(() => import("./components/Hero"));
+// const Sponsors = lazy(() => import("./components/Sponsors"));
+// const VisionMission = lazy(() => import("./components/Mission"));
+// const Community = lazy(() => import("./components/Community"));
+// const Services = lazy(() => import("./components/Services"));
+// const TestimonialSection = lazy(() => import("./components/Testimonials"));
+// const BlogSection = lazy(() => import("./components/Blog"));
+// const Stats = lazy(() => import("./components/Stats"));
+// const Team = lazy(() => import("./components/Team"));
+// const FAQ = lazy(() => import("./components/Faq"));
+// const Contact = lazy(() => import("./components/Contact")); // Contact Page
+// const Careers = lazy(() => import("./components/Careers")); // Careers Page
+// const NotFound = lazy(() => import("./components/NotFound")); // 404 Page
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-    <Navbar />
-    <HeroSection />
-    <Sponsors />
-    <VisionMission />
-    <Community />
-    <Services />
-    <Hero />
-    <TestimonialSection />
-    <BlogSection />
-    {/* <AwibIEHR /> */}
-    {/* <OverlaySection /> */}
-    {/* <HealthcareSection /> */}
-    <FAQ />
-    <Footer />
-         </>
-  )
+      <Navbar />
+      {/* <Suspense fallback={<div className="text-center py-10">Loading...</div>}> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="/sponsors" element={<Sponsors />} /> */}
+          {/* <Route path="/mission" element={<VisionMission />} /> */}
+          {/* <Route path="/team" element={<Team />} /> */}
+          {/* <Route path="/community" element={<Community />} /> */}
+          {/* <Route path="/services" element={<Services />} /> */}
+          {/* <Route path="/testimonials" element={<TestimonialSection />} /> */}
+          {/* <Route path="/blog" element={<BlogSection />} /> */}
+          {/* <Route path="/stats" element={<Stats />} /> */}
+          {/* <Route path="/faq" element={<FAQ />} /> */}
+          {/* <Route path="/careers" element={<Careers />} /> */}
+          <Route path="/contact" element={<Contact />} />
+          
+          {/* 404 Page */}
+          {/* <Route path="*" element={<NotFound />} /> */}
+        </Routes>
+      {/* </Suspense> */}
+      <Footer />
+      </>
+  );
 }
 
-export default App
+export default App;
