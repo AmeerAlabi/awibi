@@ -13,6 +13,9 @@ import Sponsors from './components/Sponsors'
 import Services from './components/Services'
 import HeroSection from './components/Hero'
 import HealthcareSection from './components/Section'
+import AwibIEHR from './components/Section'
+import Hero from './components/Section'
+import Community from './components/Community'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,13 +24,16 @@ function App() {
     <>
     <Navbar />
     <HeroSection />
-    <Services />
     <Sponsors />
     <VisionMission />
-    <OverlaySection />
-    <HealthcareSection />
+    <Community />
+    <Services />
+    <Hero />
     <TestimonialSection />
     <BlogSection />
+    {/* <AwibIEHR /> */}
+    {/* <OverlaySection /> */}
+    {/* <HealthcareSection /> */}
     <FAQ />
     <Footer />
          </>

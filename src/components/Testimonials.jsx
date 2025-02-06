@@ -31,7 +31,7 @@ const testimonials = [
 
 const TestimonialSection = () => {
   return (
-    <div className="container bg-[#D2E1FA21] mt-[400px] mx-auto px-6 py-16">
+    <div className="container bg-[#D2E1FA21] mt-[0px] mx-auto px-6 py-16">
       {/* Header */}
 
       <p className="text-center text-[22px] font-[700] text-lg text-[black] ">

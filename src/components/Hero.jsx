@@ -1,71 +1,96 @@
-import { FiUsers, FiFileText, FiBox, FiActivity } from "react-icons/fi"
-improt img
+import { FiUsers, FiFileText, FiBox, FiActivity } from "react-icons/fi";
+import img1 from '../assets/Images/hero1.png';
+import img2 from '../assets/Images/img2.jpeg';
 
-const Card = ({ children, className = "" }) => (
-  <div className={`rounded-lg shadow-md overflow-hidden ${className}`}>{children}</div>
-)
+// Reusable Card Component
+const Card = ({ children, className = "", ...props }) => (
+  <div
+    className={`overflow-hidden rounded-lg ${className}`}
+    {...props}
+  >
+    {children}
+  </div>
+);
 
+// Reusable Button Component
 const Button = ({ children, className = "", variant = "primary", ...props }) => (
   <button
-    className={`px-4 py-2 rounded-md font-medium ${
-      variant === "primary" ? "bg-blue-600 text-white" : "border border-gray-300 text-gray-700"
+    className={`px-6 py-3 rounded-md font-semibold transition-all duration-200 ${
+      variant === "primary"
+        ? "bg-blue-600 text-white hover:bg-blue-700"
+        : "bg-white text-blue-600 border border-blue-600 hover:bg-blue-50"
     } ${className}`}
     {...props}
   >
     {children}
   </button>
-)
+);
 
 export default function GridSection() {
   return (
-    <section className="mx-auto w-full max-w-7xl px-4 py-12">
+    <div className=" mt-[60px]">
+
+<section className="container mx-auto px-4 py-16 text-center">
+        <h1 className="mb-4 text-5xl font-bold tracking-tight md:text-6xl">
+          Transforming <span className="text-[#4169E1]">Healthcare</span> in Africa
+        </h1>
+        <p className="mx-auto mb-8 max-w-2xl text-lg text-black">
+          Shaping the future of healthcare in Africa through technology, innovation and empowerment
+        </p>
+        <Button  className="bg-[#4169E1]   px-8 h-[50px] text-lg hover:bg-[#4169E1]/90">
+          Explore our services
+        </Button>
+      </section>
+
+  <section className="mx-auto md:w-[1150px] w-full mt-[5px] max-w-7xl px-4 py-12">
+      {/* Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Community Card */}
-
-
-        <Card className="col-span-2">
-          <div className="p-6 grid md:grid-cols-2 gap-4">
-              <img
-                src="/placeholder.svg?height=300&width=400"
-                alt="EHR illustration"
-                className="h-full w-full object-cover rounded-lg"
-              />
-            </div>
-          {/* </div> */}
+        <Card className=" h-[300px] rounded-lg col-span-2">
+          <img
+            src={img1}
+            alt="EHR illustration"
+            className="h-full w-full object-cover rounded-lg"
+          />
         </Card>
 
-
-        {/* EHR Card */}
-
-        <Card className="bg-blue-600 text-white">
-          <div className="p-6 grid md:grid-cols-2 gap-4">
-            <div className="space-y-4">
+        {/* Awibi Community Card */}
+        <Card className="bg-blue-600 h-[300px] text-white">
+          <div className="p-8">
+            <div className="space-y-2">
               <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white/10">
                 <FiUsers className="h-6 w-6" />
               </div>
               <h3 className="text-2xl font-bold">Awibi Community</h3>
               <p className="text-white/80">
-                An open community ecosystem of enthusiasts, students, researchers and professionals.
+                An open community ecosystem of enthusiasts, students, researchers, and professionals.
               </p>
-              <Button variant="outline" className="bg-white text-blue-600 hover:bg-blue-50">
+              <Button variant="outline" className="mt-4">
                 Become a member
               </Button>
-            </div>
-            <div className="relative hidden md:block">
-              <img
-                src="/placeholder.svg?height=400&width=400"
-                alt="Community illustration"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
             </div>
           </div>
         </Card>
 
-       
+        {/* EHR Card */}
+        <Card className="bg-[#335CF4] h-[300px] text-white">
+          <div className="p-5">
+            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white/10">
+              <FiFileText className="h-6 w-6" />
+            </div>
+            <h3 className="text-2xl font-bold">Electronic Health Record (EHR)</h3>
+            <p className="text-white/80">
+              Providing access to electronic health records (EHR) for health and diagnostic centers, making quality healthcare more efficient and accessible.
+            </p>
+            <Button variant="outline" className="mt-4">
+              Learn more
+            </Button>
+          </div>
+        </Card>
 
         {/* Partners Card */}
-        <Card className="bg-red-400 text-white">
-          <div className="p-6 flex flex-col items-center justify-center text-center">
+        <Card className="bg-red-400 h-[300px h-[300px] text-white">
+          <div className="p-8 flex flex-col items-center justify-center text-center">
             <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white/10">
               <FiBox className="h-6 w-6" />
             </div>
@@ -74,44 +99,19 @@ export default function GridSection() {
           </div>
         </Card>
 
-        {/* Training Card */}
-        <Card>
-          <div className="p-6 space-y-4">
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
-              <FiUsers className="h-6 w-6 text-blue-600" />
-            </div>
-            <h3 className="text-xl font-bold">Training</h3>
-            <p className="text-sm text-gray-600">
-              Professional development and specialized training programs for healthcare professionals.
-            </p>
-            <Button variant="outline">Learn more</Button>
-          </div>
-        </Card>
-
         {/* Consultations Card */}
-        <Card>
-          <div className="p-6 space-y-4">
-            <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
-              <FiActivity className="h-6 w-6 text-blue-600" />
-            </div>
-            <h3 className="text-xl font-bold">Consultations</h3>
-            <p className="text-sm text-gray-600">Bridging the gap in health tech training and expertise.</p>
-            <Button variant="outline">Learn more</Button>
-          </div>
+        <Card className=" h-[300px] ">
+          <img
+            src={img2}
+            alt="Consultations illustration"
+            className="h-full w-full object-cover rounded-lg"
+          />
         </Card>
       </div>
 
       {/* Logos Section */}
-      <div className="mt-12 bg-blue-600 px-6 py-8 rounded-lg">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-          {["Washington Post", "TechCrunch", "Bloomberg", "Gizmodo", "Forbes"].map((logo) => (
-            <div key={logo} className="flex items-center justify-center">
-              <span className="text-white font-semibold">{logo}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+      
     </section>
-  )
+    </div>
+  );
 }
-

@@ -49,7 +49,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-16 mt-[400px] bg-gray-100">
+    <section className="py-16  bg-gray-100">
       <div className="container mx-auto px-6 text-center">
         {/* Section Heading */}
         <h2 className="text-[16px] font-bold text-[#335CF4] mb-4">Our Services</h2>
