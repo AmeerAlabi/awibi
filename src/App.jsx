@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
+import Blog from "./pages/Blog";
 
 // Lazy Loading Components
 // const HeroSection = lazy(() => import("./components/Hero"));
@@ -33,7 +34,7 @@ function App() {
           {/* <Route path="/community" element={<Community />} /> */}
           {/* <Route path="/services" element={<Services />} /> */}
           {/* <Route path="/testimonials" element={<TestimonialSection />} /> */}
-          {/* <Route path="/blog" element={<BlogSection />} /> */}
+          <Route path="/blog" element={<Blog />} />
           {/* <Route path="/stats" element={<Stats />} /> */}
           {/* <Route path="/faq" element={<FAQ />} /> */}
           {/* <Route path="/careers" element={<Careers />} /> */}
