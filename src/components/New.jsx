@@ -2,7 +2,7 @@ import bg from '../assets/Images/bg3.png';
 
 export default function New() {
   return (
-    <section className="relative bg-[#D2E1FA21] h-screen w-full bg-cover bg-center bg-no-repeat">
+    <section className="relative mt-[70px] bg-[] h-screen w-full bg-cover bg-center bg-no-repeat">
       {/* Background Image */}
       <img
         src={bg}
