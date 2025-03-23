@@ -7,7 +7,7 @@ import sponsor4 from "../assets/Images/crunch.png";
 
 const Sponsors = () => {
   return (
-    <section className=" mt-[50px] bg-[#002769] py-16">
+    <section className=" mt-[0px] bg-[#002769] py-16">
       <div className="container mx-auto px-6 text-center">
         {/* Section Heading */}
 

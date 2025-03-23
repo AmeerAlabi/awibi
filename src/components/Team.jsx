@@ -17,8 +17,8 @@ export default function Team() {
       <div className="container mx-auto px-4">
         {/* Title and Description */}
         <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-[#335CF4] mb-4">Meet the visionaries behind AWIBI</h2>
-          <p className="text-lg text-[#333333] max-w-2xl mx-auto">
+        <h2 className="text-[40px] font-bold text-[#335CF4] bg-gradient-to-r from-[#FF5959] to-[#335CF4] text-transparent bg-clip-text mb-4">Meet the visionaries behind AWIBI</h2>
+          <p className="text-l4g text-[#333333] max-w-2xl mx-auto  ">
           Behind every innovation, there is a team that dares to dream, build and transform.
           </p>
         </div>

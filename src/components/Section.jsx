@@ -25,7 +25,7 @@ export default function Hero() {
           </p>
 
           <button
-            className="bg-white text-blue-600 px-6 py-3 rounded font-medium hover:bg-gray-100 transition-colors duration-200"
+            className="bg-white cursor-pointer text-blue-600 px-6 py-3 rounded font-medium hover:bg-gray-100 transition-colors duration-200"
             aria-label="Discover AwibiEHR"
           >
             Discover AwibiEHR

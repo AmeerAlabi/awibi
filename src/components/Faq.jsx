@@ -42,7 +42,7 @@ const FAQ = () => {
 
   return (
     <div className=" mx-auto  mt-[20px] px-6 py-10">
-      <h2 className="text-3xl font-bold text-center mb-6">FAQ</h2>
+      <h2 className="text-3xl font-bold text-center mb-6 bg-gradient-to-r from-[#FF5959] to-[#335CF4] text-transparent bg-clip-text ">FAQ</h2>
       <p className=" text-[18px] font-[500] text-[#5d5d5d] mb-[15px]  text-center "> Find answers to common questions about Pecuniary. <br /> Need more help? Contact us anytime.</p>
 
       <div className="max-w-2xl mx-auto">

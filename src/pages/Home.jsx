@@ -25,9 +25,9 @@ function Home() {
     <Sponsors />
     <VisionMission />
     {/* <Community /> */}
-    <Community />
     <Services />
-    <Hero />
+    <Community />
+    {/* <Hero /> */}
     <TestimonialSection />
     <BlogSection />
     <Stats />

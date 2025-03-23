@@ -1,46 +1,56 @@
-import React from 'react';
-import missionImage from '../assets/Images/bg3.png'; // Replace with actual image
-import { Link } from 'react-router-dom';
+import React from "react";
+import missionImage from "../assets/Images/bg3.png"; // Ensure this matches the image in the design
+import { Link } from "react-router-dom";
 
 const VisionMission = () => {
   return (
-    <section className="container mt-[60px] mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-12">
+    <section className="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-12">
       {/* Image */}
       <div className="w-full md:w-1/2">
-        <img src={missionImage} alt="Our Mission" className="w-full rounded-lg shadow-lg" />
+        <img
+          src={missionImage}
+          alt="Healthcare professional"
+          className="w-full rounded-lg"
+        />
       </div>
 
       {/* Text Content */}
       <div className="w-full md:w-1/2">
-        <h2 className="text-4xl font-bold text-[black] mb-6">Our Mission & Vision</h2>
+        {/* Subheading */}
+        <p className="text-sm uppercase text-[#4A4A4A] font-semibold mb-2">
+          Who we are
+        </p>
+
+        {/* Main Heading */}
+        <h2 className="text-4xl font-extrabold text-[#18181B] mb-6">
+          Our Mission & Vision
+        </h2>
 
         {/* Mission Section */}
-        <div className="mb-8">
-          <h3 className="text-[16px] font-semibold text-[#18181B]">Mission</h3>
-          <p className="text-gray-700 mt-2">
-            Our mission is to empower individuals and organizations with innovative solutions, driving positive change in society.
+        <div className="mb-6">
+          <h3 className="text-base font-semibold text-[#18181B]">
+            Mission:
+          </h3>
+          <p className="text-[#4A4A4A] mt-2 leading-relaxed">
+            Using technology to spark healthcare innovation and empower people to transform healthcare across Africa.
           </p>
         </div>
 
         {/* Vision Section */}
-        <div className="mb-8">
-          <h3 className="text-[16px] font-semibold text-[#18181B]">Vision</h3>
-          <p className="text-gray-700 mt-2">
-            We envision a future where technology and innovation bridge gaps and create sustainable solutions for a better world.
+        <div className="mb-6">
+          <h3 className="text-base font-semibold text-[#18181B]">
+            Vision:
+          </h3>
+          <p className="text-[#4A4A4A] mt-2 leading-relaxed">
+            A future where health technology drives better care, stronger communities, and real impact for Africans everywhere.
           </p>
         </div>
 
-        {/* Name & Role */}
-        <div className="mb-6">
-          <p className="font-bold text-lg">John Doe</p>
-          <p className="text-gray-500">Founder & CEO</p>
-        </div>
-
-        {/* Learn More Button */}
-        <Link>
-        <button className="flex cursor-pointer items-center gap-2 text-[#267AFF] font-semibold hover:text-[#1e6ad1] transition">
-          Learn More →
-        </button>
+        {/* Learn More Link */}
+        <Link to="/about-us">
+          <button className="flex items-center gap-2 text-[#267AFF] font-semibold hover:text-[#1e6ad1] transition">
+            Learn more about us →
+          </button>
         </Link>
       </div>
     </section>
