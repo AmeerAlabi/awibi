@@ -1,11 +1,11 @@
 import { FiUsers, FiFileText, FiBox } from "react-icons/fi";
-import img1 from "../assets/Images/hero1.png";
-import img2 from "../assets/Images/img2.jpeg";
+import img1 from "../assets/Images/hero3.png";
+import img2 from "../assets/Images/bg5.jpg";
 
 // Reusable Card Component
 const Card = ({ children, className = "", ...props }) => (
   <div
-    className={`overflow-hidden rounded-lg ${className}`}
+    className={`overflow-hidden  ${className}`}
     {...props}
   >
     {children}
@@ -50,7 +50,7 @@ export default function GridSection() {
             <img
               src={img1}
               alt="EHR illustration"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-cover "
             />
           </Card>
 
@@ -96,11 +96,11 @@ export default function GridSection() {
           </Card>
 
           {/* Second Image Card */}
-          <Card className="h-[300px]">
+          <Card className="h-[350px]">
             <img
               src={img2}
               alt="Consultations illustration"
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-cover"
             />
           </Card>
         </div>

@@ -1,16 +1,16 @@
 import React from "react";
-import missionImage from "../assets/Images/bg3.png"; // Ensure this matches the image in the design
+import missionImage from "../assets/Images/vis.png"; // Ensure this matches the image in the design
 import { Link } from "react-router-dom";
 
 const VisionMission = () => {
   return (
-    <section className="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-12">
+    <section className="container py-auto mx-auto px-6 py-20   flex flex-col md:flex-row items-center gap-12">
       {/* Image */}
       <div className="w-full md:w-1/2">
         <img
           src={missionImage}
           alt="Healthcare professional"
-          className="w-full rounded-lg"
+          className="w-full h-[350px] object-contain rounded-lg"
         />
       </div>
 

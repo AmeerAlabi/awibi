@@ -14,6 +14,7 @@ import Community from '../components/Community'
 import Stats from '../components/Stats'
 import Team from '../components/Team'
 import '../App.css'
+import Section from '../components/Section'
 
 function Home() {
   const [count, setCount] = useState(0)
@@ -27,9 +28,9 @@ function Home() {
     {/* <Community /> */}
     <Services />
     <Community />
-    {/* <Hero /> */}
     <TestimonialSection />
     <BlogSection />
+    <Section />
     <Stats />
   <Team />
     <FAQ />

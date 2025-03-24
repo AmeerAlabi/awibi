@@ -30,18 +30,19 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-16 bg-[#F5F9FF]">
+    <section className="p-[20px] pb-[80px]  bg-[#F5F9FF]">
       <div className="container mx-auto px-6 text-center">
         {/* Section Heading */}
-        <h2 className="text-sm uppercase font-semibold text-[#335CF4] mb-4">
+        <h2 className="text-sm p-3 uppercase font-semibold text-[#335CF4] mb-4">
           Our Services
         </h2>
-        <p className="text-[#18181B] font-extrabold text-4xl max-w-3xl mx-auto mb-12 bg-gradient-to-r from-[#FF5959] to-[#335CF4] text-transparent bg-clip-text ">
+        <p className="text-[#18181B] p-5
+         font-extrabold text-5xl max-w-3xl mx-auto mb-12 bg-gradient-to-r from-[#FF5959] to-[#335CF4] text-transparent bg-clip-text ">
           <span className="bg-gradient-to-r from-[#FF5959] to-[#335CF4] text-transparent bg-clip-text">Innovative</span> Health Solutions for a Better Tomorrow
         </p>
 
         {/* Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 mt-[70px] md:grid-cols-3 gap-8">
           {services.map((service) => (
             <div
               key={service.id}

@@ -14,25 +14,24 @@ export default function New() {
       <div className="absolute h-full md:h-[500px] inset-0 bg-gradient-to-r from-transparent to-blue-900/100 z-10" />
 
       {/* Content */}
-      <div className="relative md:h-[500px] h-full flex items-center justify-end z-20">
-        <div className="w-full max-w-2xl px-4 md:px-8 text-white">
-          <h1 className="text-3xl md:text-xl font-bold mb-2 leading-tight">What’s new?</h1>
-          <h1 className="text-3xl md:text-5xl font-bold mb-3 leading-tight">
-          Latest In HealthTech
-          </h1>
-
-          <p className="text-base md:text-xl mb-8 opacity-90 leading-relaxed">
-          Discover what’s new in healthtech with the latest news, trends and innovations!
+      <div className="w-full md:w-1/2 text-white p-8 md:p-16 flex flex-col justify-center bg-transparent">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">AWIBI MEDTECH Group</h1>
+          <p className="text-lg text-white/90 mb-8 leading-relaxed max-w-xl">
+            A vibrant open network of enthusiasts, students, researchers, and professionals driving the future of
+            healthcare through technology, education, and innovation.
           </p>
-
-          {/* <button
-            className="bg-white text-blue-600 px-6 py-3 rounded font-medium hover:bg-gray-100 transition-colors duration-200"
-            aria-label="Discover AwibiEHR"
-          >
-            Discover AwibiEHR
-          </button> */}
+          <div>
+            <Link to="/community">
+              <button
+                className="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold text-lg hover:bg-blue-50 transition-colors duration-300"
+                aria-label="Join our Community"
+              >
+                Join our Community
+              </button>
+            </Link>
+          </div>
         </div>
-      </div>
+
     </section>
   );
 }
