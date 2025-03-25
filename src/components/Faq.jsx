@@ -72,12 +72,12 @@ const FAQ = () => {
 
       {/* Contact Us Button */}
       <div className="text-center mt-8">
-        <Link
+        {/* <Link
           to="/contact"
           className="bg-[#015AD0] text-white px-6 py-3   hover:bg-[#2b4dc4] transition"
         >
           Contact Us
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

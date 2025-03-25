@@ -6,6 +6,10 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import ComingSoon from "./components/Coming";
+import BlogDetails from "./components/BlogDetails";
+import OurServices from "./components/OurServices";
+import About from "./pages/About";
+import Career from "./pages/Career";
 
 // Lazy Loading Components
 // const HeroSection = lazy(() => import("./components/Hero"));
@@ -29,16 +33,19 @@ function App() {
       {/* <Suspense fallback={<div className="text-center py-10">Loading...</div>}> */}
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           {/* <Route path="/sponsors" element={<Sponsors />} /> */}
           <Route path="/mission" element={<ComingSoon />} />
           <Route path="/team" element={<ComingSoon/>} />
+          <Route path="/careers" element={<Career/>} />
           {/* <Route path="/community" element={<Community />} /> */}
-          <Route path="/services" element={<ComingSoon />} />
+          <Route path="/services" element={<OurServices />} />
           {/* <Route path="/testimonials" element={<TestimonialSection />} /> */}
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogDetails />} />
           {/* <Route path="/stats" element={<Stats />} /> */}
           {/* <Route path="/faq" element={<FAQ />} /> */}
-          <Route path="/careers" element={<ComingSoon />} />
+          {/* <Route path="/careers" element={<ComingSoon />} /> */}
           <Route path="/contact" element={<Contact />} />
           
           {/* 404 Page */}
