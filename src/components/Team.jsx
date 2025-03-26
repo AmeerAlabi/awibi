@@ -2,13 +2,17 @@ import React from 'react';
 
 // Placeholder images for team members (replace with actual image paths)
 import person1 from '../assets/Images/ps.png';
+import wahab from '../assets/Images/wahab.png';
+import dhik from '../assets/Images/dhik.png';
+import eni from '../assets/Images/eni.png';
+import kar from '../assets/Images/kar.png';
 
 const teamMembers = [
-  { id: 1, name: 'John Doe', position: 'CEO', image: person1, social: 'https://linkedin.com/in/johndoe' },
-  { id: 2, name: 'Jane Smith', position: 'CTO', image: person1, social: 'https://twitter.com/janesmith' },
-  { id: 3, name: 'Alice Johnson', position: 'Lead Designer', image: person1, social: 'https://dribbble.com/alicejohnson' },
-  { id: 4, name: 'Bob Brown', position: 'Marketing Head', image: person1, social: 'https://facebook.com/bobbrown' },
-  { id: 5, name: 'Charlie Davis', position: 'Developer', image: person1, social: 'https://github.com/charliedavis' },
+  { id: 1, name: 'Idris Abdulwahab K', position: 'Founder & CEO', image: wahab, social: '' },
+  { id: 2, name: 'Ibrahim Dhikrullah', position: 'Chief Technology Officer', image:dhik, social: '' },
+  { id: 3, name: 'Karim Haneef', position: 'Partnerships & Collaboration', image:kar, social: '' },
+  { id: 4, name: 'Elliot Eniola', position: 'Product Designer', image:eni, social: '' },
+  // { id: 5, name: 'Charlie Davis', position: 'Developer', image: person1, social: 'https://github.com/charliedavis' },
 ];
 
 export default function Team() {
@@ -31,7 +35,7 @@ export default function Team() {
               href={member.social}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative w-[302px] h-[568px] rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+              className="relative w-[302px] h-[568px] overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
             >
               {/* Person Image as Background */}
               <img
